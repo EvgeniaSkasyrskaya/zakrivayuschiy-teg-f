@@ -1,17 +1,10 @@
-/*Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки*/
-
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   padding-block: 100px;
-  font-family: sans-serif;
+  font-family: var(--font-family), 'Inter-Variable', sans-serif;
   background-color: var(--main-color, #fff);
   background-image: var(--background-image,
     repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
@@ -19,15 +12,9 @@
     linear-gradient(#e7e7e7 0.01%, #1a1a1a));
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: 'wght' var(--font-weight-text, 400);
   min-inline-size: 320px;
   min-block-size: 100dvb;
-}
-
-@supports (font-variation-settings: normal) {
-  .page {
-      font-family: var(--font-family, 'Inter-Variable', sans-serif);
-      font-variation-settings: 'wght' var(--font-weight-text, 400);
-  }
 }
 
 .section-width {
@@ -104,7 +91,6 @@
 .card__watermark {
   position: absolute;
   z-index: 1;
-  opacity: 50%;
   color: var(--accent-color, #000);
   font-family: var(--font-family-accent, 'Press Start 2P', monospace);
   font-size: 14px;
@@ -119,7 +105,7 @@
 }
 
 @supports ((stroke: #fff) or (-webkit-text-stroke: 1px #fff)) {
-  
+ 
   .card__watermark {
     stroke: var(--main-color, #fff);
     text-shadow: none;
@@ -270,33 +256,40 @@ transition: fill 0.3s linear;
   transition: fill 0.3s 0.06s;
 }
 
-
-.grayscale {
-  filter: grayscale(70%) opacity(80%);
+.brightness {
+  filter: brightness(120%);
 }
 
-.saturate {
-  filter: saturate(400%);
+.blur {
+  filter: blur(15px);
+}
+
+.contrast {
+  filter: contrast(150%);
 }
 
 .hue-rotate {
-  filter: hue-rotate(35deg);
+  filter: hue-rotate(140deg) contrast(200%) brightness(120%);
 }
 
-.invert {
-  filter: invert(80%);
+.saturate {
+  filter: saturate(250%);
+}
+
+.grayscale {
+  filter: grayscale(70%) opacity(80%);
 }
 
 .sepia {
   filter: sepia(90%);
 }
 
-.blur {
-  filter: blur(20px);
+.opacity {
+  filter: opacity(80%);
 }
 
-.filter-mix {
-  filter: hue-rotate(90deg) blur(2px) opacity(60%) saturate(180%) brightness(70%);
+.image-top {
+  object-position: top;
 }
 
 .save__button {
