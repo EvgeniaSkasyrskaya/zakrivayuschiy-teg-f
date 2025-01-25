@@ -34,11 +34,13 @@
 }
 
 .header__title {
+  color: var(--accent-color, #000);
   font-size: clamp(49px, 2.71rem + 1.51vw, 65px);
   white-space: nowrap;
 }
 
 .header__subtitle {
+  color: var(--accent-color, #000);
   font-size: clamp(14px, 0.677rem + 0.85vw, 23px);
   text-transform: uppercase;
 }
@@ -66,6 +68,7 @@
 
 .card__title {
   padding: 5px 10px;
+  color: var(--accent-color, #000);
   font-size: var(--font-size-text, 18px);
   font-variation-settings: 'wght' var(--font-weight-title, 700);
 }
@@ -77,6 +80,7 @@
 }
 
 .card__image {
+  border-block: 2px solid var(--accent-color, #000);
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
@@ -114,12 +118,14 @@
 .card__content {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 28px;
   padding: 25px;
 }
 
 .card__text {
+  color: var(--accent-color, #000);
   font-size: var(--font-size-text, 18px);
+  line-height: calc(21 / 18);
 }
 
 .card__buttons {
@@ -127,12 +133,14 @@
   flex-direction: row;
   gap: 5px;
   align-self: flex-end;
-  padding-inline-end: 26px;
-  padding-block: 3px 25px;
+  padding-inline-end: 25px;
+  padding-block-end: 25px;
 }
 
 .card__icon-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
@@ -141,7 +149,7 @@
   transition: border-color 0.3s ease;
   cursor: pointer;
   inline-size: 40px;
-  block-size: 35px;
+  block-size: 38px;
 }
 
 .card__icon-button:focus-visible {
@@ -194,8 +202,11 @@
 }
 
 .card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  block-size: 37px;
+  block-size: 38px;
   inline-size: 129px;
 }
 
@@ -328,6 +339,7 @@
   margin-block: auto;
   border: 2px solid #000;
   padding: 30px;
+  background-color: var(--main-color, #fff);
   inline-size: 355px;
 }
 
