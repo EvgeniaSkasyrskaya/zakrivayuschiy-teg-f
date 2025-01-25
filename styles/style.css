@@ -29,7 +29,7 @@
   border: 2px solid var(--accent-color, #000);
   padding-block: clamp(120px, calc(120px + (100vi - 375px) * 8 / 1065), 128px);
   overflow: hidden;
-  font-family: var(--font-family-accent, 'Press Start 2P', monospace);
+  font-family: var(--font-family-accent, 'Press Start 2P', fantasy);
   background-color: var(--main-color, #fff);
 }
 
@@ -93,7 +93,7 @@
   z-index: 1;
   opacity: 50%;
   color: var(--accent-color, #000);
-  font-family: var(--font-family-accent, 'Press Start 2P', monospace);
+  font-family: var(--font-family-accent, 'Press Start 2P', fantasy);
   font-size: 14px;
   text-shadow: 
     -1px 0 var(--main-color, #fff),
@@ -195,7 +195,7 @@
   z-index: 2;
   margin: auto;
   color: var(--main-color, #fff);
-  font-family: var(--font-family-accent, 'Press Start 2P', monospace);
+  font-family: var(--font-family-accent, 'Press Start 2P', fantasy);
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
@@ -358,7 +358,7 @@
 
 .dialog__text {
   color: var(--accent-color, #000);
-  font-family: var(--font-family-accent, 'Press Start 2P', monospace);
+  font-family: var(--font-family-accent, 'Press Start 2P', fantasy);
   font-size: 14px;
   line-height: 151%;
   text-transform: uppercase;
