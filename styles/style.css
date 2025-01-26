@@ -28,7 +28,6 @@
   margin-block-end: 100px;
   border: 2px solid var(--accent-color, #000);
   padding-block: clamp(120px, calc(120px + (100vi - 375px) * 8 / 1065), 128px);
- /* overflow: hidden;*/
   font-family: var(--font-family-accent, 'Press Start 2P', fantasy);
   background-color: var(--main-color, #fff);
 }
@@ -162,8 +161,8 @@
   border: 2px solid var(--accent-color, #000);
   overflow: hidden;
   background-color: var(--main-color, #fff);
-  cursor: pointer;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .button:focus,
@@ -175,7 +174,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color, #000);
-  /*transition: box-shadow 0.3s ease;*/
 }
 
 .button::after {
@@ -317,8 +315,8 @@
 
 .save__image {
   z-index: 2;
-  block-size: 21px;
   color: var(--main-color, #fff);
+  block-size: 21px;
   aspect-ratio: 1/1;
   mix-blend-mode: difference;
 }
